@@ -48,33 +48,33 @@ const displayCategoryNews = (categoryNews) => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('row', 'g-0', 'mb-3', 'border', 'rounded');
         newsDiv.innerHTML = `
-            <div class="col-md-4">
+            <div class="col-sm-3 text-center text-lg-start">
                 <img src="${news.thumbnail_url}" class="img-fluid" alt="...">
             </div>
-                <div class="col-md-8">
+                <div class="col-sm-9">
                     <div class="card-body">
                         <h5 class="card-title">${news.title}</h5>
                         <p class="card-text">${news.details.length > 200 ? news.details.substring(0, 200) + '...' : news.details}</p>
                         <div class="row">
-                            <div class="col-sm-3 d-flex align-items-center">
+                            <div class="col-12 col-sm-3 d-flex justify-content-center align-items-center">
                                 <div class="w-25 rounded-circle">
                                     <img src="${news.author.img ? news.author.img : 'not available'}"
                                         class="img-fluid  rounded-circle" alt="">
                                 </div>
-                                <div class="ps-2">
+                                <div class="ps-2 ">
                                     <span class="author-name">${news.author.name ? news.author.name : 'not available'}</span>
                                     <br>
                                     <span class="blog-publish-date">${news.author.published_date ? news.author.published_date : 'not available'}</span>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex justify-content-center align-items-center">
+                            <div class="col-4 pt-3 col-sm-3 pt-2 d-flex justify-content-center align-items-center">
                                 <i class="fa-regular fa-eye"></i> <span class="ps-2">${news.total_view ? news.total_view : 'not available'}</span>
                             </div>
-                            <div class="col-sm-3 d-flex justify-content-center align-items-center">
+                            <div class="col-4 pt-3 col-sm-3 pt-2 d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                     class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <div class="col-sm-3 d-flex justify-content-end align-items-center">
+                            <div class="col-4 pt-3 col-sm-3 d-flex justify-content-end align-items-center">
                             <a type="button" onclick="loadNewsDetails('${news._id}')" data-bs-toggle="modal" data-bs-target="#phoneDetailsModal">
                                  <i class="fa-solid fa-arrow-right"></i>
                             </a>
