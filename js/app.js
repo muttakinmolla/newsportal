@@ -38,7 +38,7 @@ const categoryNews = (id) => {
 }
 
 const displayCategoryNews = (categoryNews) => {
-    
+
     const categoryCount = document.getElementById('category-count');
     categoryCount.innerText = categoryNews.length;
 
@@ -117,7 +117,7 @@ const displayNewsDetails = (news) => {
                         <h5 class="card-title">${news.title}</h5>
                         <p class="card-text">${news.details} </p>
                         <div class="row">
-                            <div class="col-sm-6 d-flex align-items-center">
+                            <div class="col-12 col-sm-12 d-flex justify-content-center align-items-center">
                                 <div class="w-25 rounded-circle">
                                     <img src="${news.author.img ? news.author.img : 'not available'}"
                                         class="img-fluid  rounded-circle" alt="">
@@ -128,10 +128,10 @@ const displayNewsDetails = (news) => {
                                     <span class="blog-publish-date">${news.author.published_date ? news.author.published_date : 'not available'}</span>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex justify-content-center align-items-center">
-                                // <i class="fa-regular fa-eye"></i> <span class="ps-2">${news.total_view ? news.total_view : 'not available'}</span>
+                            <div class="col-6 pt-3 col-sm-6 d-flex justify-content-start align-items-center">
+                             <i class="fa-regular fa-eye"></i> <span class="ps-2">${news.total_view ? news.total_view : 'not available'}</span>
                             </div>
-                            <div class="col-sm-3 d-flex justify-content-center align-items-center">
+                            <div class="col-6 pt-3 col-sm-6 d-flex justify-content-end align-items-center">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                     class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
