@@ -42,14 +42,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav m-auto" id="category-title">
-                        
+
                     </ul>
                 </div>
             </div>
         </nav>
 
         <div class="shadow-sm p-3 mb-5 bg-body rounded">
-            <h4>4 items found</h4>
+            <h4> <span id="category-count">0</span> News found</h4>
         </div>
     </header>
     <!-- header section end -->
@@ -60,14 +60,37 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="mb-3 w-100" id="category-news-container">
-                        
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- news section end -->
+
+        <!-- loader ---------------------------------- -->
+        <section class="d-none" id="loader">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                <div class="spinner-border text-info text-center" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
     </main>
 
+
+    <!-- modal content -->
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="phoneDetailsModal" tabindex="-1" aria-labelledby="phoneDetailsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="news-details">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- modal end -->
 
 
 
