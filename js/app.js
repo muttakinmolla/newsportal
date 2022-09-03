@@ -27,7 +27,6 @@ const displayCategory = (categories) => {
 const categoryNews = (id) => {
     toggleSpinner(true);
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
-    console.log(id)
     fetch(url)
         .then(res => res.json())
         .then(data => displayCategoryNews(data.data))
@@ -91,7 +90,6 @@ const displayCategoryNews = (categoryNews) => {
 
 const loadNewsDetails = (newsId) => {
     const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
-    console.log(newsId)
     fetch(url)
         .then(res => res.json())
         .then(data => displayNewsDetails(data.data[0]))
