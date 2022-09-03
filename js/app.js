@@ -39,7 +39,7 @@ const categoryNews = (id) => {
 const displayCategoryNews = (categoryNews) => {
 
     const categoryCount = document.getElementById('category-count');
-    categoryCount.innerText = categoryNews.length;
+    categoryCount.innerText = categoryNews.length ? categoryNews.length : 'No';
 
     const categoryNewsContainer = document.getElementById('category-news-container');
     categoryNewsContainer.innerHTML = ``;
