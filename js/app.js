@@ -44,7 +44,9 @@ const displayCategoryNews = (categoryNews) => {
 
     const categoryNewsContainer = document.getElementById('category-news-container');
     categoryNewsContainer.innerHTML = ``;
-    categoryNews.forEach(news => {
+
+    const allNews = categoryNews.sort((a,b) => b.total_view-a.total_view);
+    allNews.forEach(news => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('row', 'g-0', 'mb-3', 'border', 'rounded');
         newsDiv.innerHTML = `
