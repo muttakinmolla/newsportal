@@ -25,6 +25,7 @@ const displayCategory = (categories) => {
 }
 
 const categoryNews = (id) => {
+    questionAnswer(false);
     toggleSpinner(true);
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
     fetch(url)
@@ -146,6 +147,15 @@ const toggleSpinner = (isLoading) => {
         loaderSection.classList.remove('d-none');
     } else {
         loaderSection.classList.add('d-none');
+    }
+}
+
+const questionAnswer = (isClick) => {
+    const question = document.getElementById('question');
+    if (isClick) {
+        question.classList.remove('d-none');
+    } else {
+        question.classList.add('d-none');
     }
 }
 

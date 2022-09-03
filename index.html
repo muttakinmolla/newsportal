@@ -28,8 +28,8 @@
                 <h2 class="bg-info text-white ps-1 pe-1 rounded">TIMES NEWS</h2>
             </div>
             <div>
-                <button class="btn btn-primary">News</button>
-                <button class="btn btn-primary">Blogs</button>
+                <button class="btn btn-primary" onclick="questionAnswer(false)">News</button>
+                <button class="btn btn-primary" onclick="questionAnswer(true)">FAQ</button>
             </div>
         </div>
 
@@ -77,20 +77,25 @@
 
 
         <!-- question answer section start -->
-        <section class="container">
-            <div class="question mb-3">
+        <section class="container d-none" id="question">
+            <div class="question mb-5">
                 <h5>1. What is the difference between var , let , const ?</h5>
-                <p class="ms-4">Answer : The scope of a var variable is functional scope and it can be updated and re-declared into
+                <p class="ms-4">Answer : The scope of a var variable is functional scope and it can be updated and
+                    re-declared into
                     the scope. The scope of a let variable is block it can be updated but can not re-declared. On the
                     other hand The const variable is block scope. It can not be re-updated and re-declared. </p>
             </div>
-            <div class="question mb-3">
-                <h5>1. What is the difference between arrow function and regular function?</h5>
-                <p class="ms-4"> Arrow -a new feature introduced in ES6 - enable writing concise functions in javaScript.Arguments objects are not available in arrow functions, but are available in regular functions</p>
+            <div class="question mb-5">
+                <h5>2. What is the difference between arrow function and regular function?</h5>
+                <p class="ms-4"> Arrow -a new feature introduced in ES6 - enable writing concise functions in
+                    javaScript.Arguments objects are not available in arrow functions, but are available in regular
+                    functions</p>
             </div>
-            <div class="question mb-3">
-                <h5>1. What is the difference between arrow function and regular function?</h5>
-                <p class="ms-4"> Arrow -a new feature introduced in ES6 - enable writing concise functions in javaScript.Arguments objects are not available in arrow functions, but are available in regular functions</p>
+            <div class="question mb-5">
+                <h5>3. Why we use template string?</h5>
+                <p class="ms-4">The big advantage of template string is when it is necessary to insert variables into a
+                    string phrase. The other advantage of template string in not needing to escape double quote or
+                    single quote characters using a backslash. It easy to write multiline code. </p>
             </div>
         </section>
         <!-- question answer section end -->
